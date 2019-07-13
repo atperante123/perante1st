@@ -11,6 +11,7 @@ class Database{
     }
 
     public function execute($sql){
+        // return mysqli_query($this->con, $sql);
        if(mysqli_query($this->con, $sql)){
         return 1;
 
