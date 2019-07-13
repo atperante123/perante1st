@@ -11,7 +11,10 @@ class Database{
     }
 
     public function execute($sql){
+        //for act2
         // return mysqli_query($this->con, $sql);
+
+        //for act1
        if(mysqli_query($this->con, $sql)){
         return 1;
 
