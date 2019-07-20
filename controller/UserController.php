@@ -14,7 +14,14 @@ class UserController{
         $this->userModel->password = $password;
         $this->userModel->insert();
     }
-
+    public function updateUser($id){
+        $sql = "UPDATE tbluser set password = '$this->password' where id = $this->id";
+        if($this->db->execute($sql)){
+            return true;
+        }
+        else{
+            return  echo "Cannot Update ";
+        }
     public function getAllUser(){
         return $this->userModel->readAll();
     }
